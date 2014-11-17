@@ -24,7 +24,7 @@ public class Ue5_2_Querprodukt {
 		
 		for (int i=1; i != 0; i++) {
 
-			System.out.println("Bitte Zahl zwischen 1 und 1 Mio. eingeben:");
+			System.out.println("Bitte Zahl zwischen 0 und 1 Mio. eingeben:");
 			
 			eingabe = scanner.nextInt();
 			
