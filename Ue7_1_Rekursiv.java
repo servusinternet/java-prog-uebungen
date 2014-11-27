@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ue7_1_Rekursion {
 	public static float potenz(float basis, int exponent) {
 		if (exponent == 0) return 1;
@@ -6,8 +8,12 @@ public class Ue7_1_Rekursion {
 	}
 	
 	public static void main(String[] args) {
-		float basis = 2.451f;
-		int exponent = 3;
-		System.out.println(potenz(basis, exponent));
+		Scanner eingabe = new Scanner(System.in);
+		do {
+			System.out.print("Basis x: ");
+			float basis = eingabe.nextFloat();
+			System.out.print("Exponent n: ");
+			System.out.println(potenz(basis, eingabe.nextInt()));
+		} while (true);
 	}
 }
