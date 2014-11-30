@@ -9,9 +9,7 @@ public class Ue7_4_Standardabweichung {
 		for (int i=0; i < n; i++) {
 			 a = a + Math.pow((zahlen[i]-mittel),2);
 		}
-		double b = a / n;
-		double abweichung = Math.sqrt(b);
-		return abweichung;
+		return Math.sqrt(a/n);
 	}
 		
 	public static void main(String[] args) {
