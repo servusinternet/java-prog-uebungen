@@ -38,9 +38,6 @@ public class Ue7_2_Sinusberechnung {
 		eingabe.close();
 		// Überprüfen der Werte
 		//System.out.println(Math.sin(x));
-		// Ausgabe von Max und Min-Wert einer Double-Zahl (Laufbedingung der sinus-Methode) 
-/*		System.out.println(Double.MAX_VALUE);
-		System.out.println(Double.MIN_VALUE);*/
 	} 
 	
 }
