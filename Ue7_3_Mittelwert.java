@@ -12,6 +12,11 @@ public class Ue7_3_Mittelwert {
 		System.out.println("Anzahl Werte:");
 		int n = eingabe.nextInt();
 		
+		while (n < 1) {
+			System.out.println("Bitte eine Zahl > 0 eingeben! \n Anzahl Werte:");
+			n = eingabe.nextInt();
+		}
+		
 		for (int i=1; i <= n; i++) {
 			System.out.print("Wert x" + i + ": ");
 			double x = eingabe.nextDouble();
