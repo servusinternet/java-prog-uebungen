@@ -1,0 +1,85 @@
+package übung10;
+/* AUFGABE 2
+Schreiben Sie eine Klasse Raum. Ein Raum hat eine Kennung, die ihn identifiziert (z.B.
+I.2.1) und kann eine maximale Anzahl an Studenten für eine Vorlesung beherbergen.
+Ferner soll ein Raum (für eine Vorlesung) belegbar sein und darüber Auskunft geben
+können, ob er gerade belegt ist oder nicht.
+ */
+
+/* AUFGABE 4
+ * Ergänzen Sie im Raum als Attribut ein Array von Studenten.
+Erweitern Sie den Raum, um eine Methode betreteRaum() und übergeben Sie
+beim Aufruf der Methode den Studenten, der den Raum betritt und speichern Sie ihn
+im Array. Gehen Sie analog für eine Methode verlasseRaum() vor.
+ */
+
+public class Raum {
+	
+	// Aufgabe 2
+	/*
+	private String kennung;
+	private int kapazitaet;
+	private boolean belegt;
+	
+	public Raum(String kennung, int kapazitaet, boolean belegt) {
+		this.kennung = kennung;
+		this.kapazitaet = kapazitaet;
+		this.belegt = belegt;
+	}
+	
+	public String getBelegt() {
+		if (belegt == true) {
+			return "belegt";
+		} else {
+			return "nicht belegt";
+		}
+	}
+	public void setBelegt(boolean belegt) {
+		this.belegt = belegt;
+	}
+	*/
+	
+	// Aufgabe 3	
+	private String kennung;
+	private int kapazitaet;
+	private Vorlesung vorlesung;
+	//Aufgabe 4
+	private String[] studenten;
+	
+	public Raum(String kennung, int kapazitaet, Vorlesung vorlesung) {
+		this.kennung = kennung;
+		this.kapazitaet = kapazitaet;
+		this.vorlesung = vorlesung;
+		// Aufgabe 4
+		this.studenten = new String[kapazitaet];
+	}
+	
+	public String getBelegt() {
+		return vorlesung.getVorlesung();
+	}
+	
+	// Aufgabe 4
+	public void betreteRaum(String studenten) {
+		for (int i=0; i<this.kapazitaet; i++) {
+			if (this.studenten[i] == null) {
+				this.studenten[i] = studenten;
+				break;
+			}
+		}
+	}
+	public void verlasseRaum(String studenten) {
+		for (int i=0; i<this.kapazitaet; i++) {
+			if (this.studenten[i] == studenten) {
+				this.studenten[i] = null;
+			}
+		}
+	}
+	public String getStudenten() {
+		String studenten = "";
+		for (int i=0; i<this.kapazitaet; i++) {
+			studenten = studenten + "\n" + this.studenten[i];
+		}
+		return studenten;
+	}
+
+}
