@@ -1,0 +1,49 @@
+package übung10;
+/*
+Schreiben Sie eine main-Methode, die zwei Räume anlegt, den Raum I.2.1 und den
+Raum I.2.15, mit der jeweils maximalen Zahl der Studenten, die in den Raum passen.
+Danach soll die Methode abfragen, ob die Räume belegt sind. Im letzten Schritt soll
+der Raum I.2.1 belegt werden und nochmals beide Räume befragt werden, ob sie
+belegt sind. Setzen Sie bei der Aufgabe das Prinzip des Information Hidings um!
+*/
+
+// Aufgabe 2
+/*
+public class RaumAnlegen {
+	public static void main(String[] args) {
+		Raum I_2_1 = new Raum("I.2.1", 20, false);
+		Raum I_2_15 = new Raum("I.2.15", 35, false);
+		System.out.println("Raum I.2.1 ist " + I_2_1.getBelegt());
+		System.out.println("Raum I.2.15 ist " + I_2_15.getBelegt());
+		
+		I_2_1.setBelegt(true);
+		System.out.println("Raum I.2.1 ist " + I_2_1.getBelegt());
+		System.out.println("Raum I.2.15 ist " + I_2_15.getBelegt());
+	}
+}
+*/
+
+public class RaumAnlegen {
+	public static void main(String[] args) {
+		// Aufgabe 3 
+		Vorlesung mathe = new Vorlesung("Mathematik", "Dr. Prof. Kiraly", "E-Commerce");
+		Raum I_2_1 = new Raum("I.2.1", 20, mathe);
+		Raum I_2_15 = new Raum("I.2.15", 35, new Vorlesung());
+		System.out.println("Belegung Raum I.2.1: " + I_2_1.getBelegt());
+		System.out.println("Belegung Raum I.2.15: " + I_2_15.getBelegt());
+		
+		// Aufgabe 4
+		/*
+		 * Schreiben Sie ein Testprogramm, das den Raum mit Studenten belegt, alle
+		 * Studenten, die zum Zeitpunkt der Abfrage im Raum sind, ausgibt und dann die
+		 * Studenten wieder den Raum verlassen lässt.
+		 */
+		I_2_1.betreteRaum("Marvin");
+		I_2_1.betreteRaum("Paul Agostino");
+		System.out.println(I_2_1.getStudenten());
+		I_2_1.verlasseRaum("Marvin");
+		I_2_1.verlasseRaum("Paul Agostino");
+		System.out.println(I_2_1.getStudenten());
+		
+	}
+}
