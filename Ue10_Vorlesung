@@ -1,0 +1,35 @@
+package übung10;
+
+/*
+ Erweitern Sie Ihr Programm aus Aufgabe 2, um eine Klasse Vorlesung. Eine
+Vorlesung soll einen Namen haben, von einem Dozenten gehalten werden und einem
+Studiengang zugeordnet sein.
+Wenn ein Raum belegt wird, dann soll er mit einer bestimmten Vorlesung (also
+einem Objekt der Klasse Vorlesung) belegt werden.
+Wenn der Raum nach seiner Belegung gefragt wird, soll der die Vorlesung
+zurückgeben, mit der er gerade belegt ist. Wenn der Raum frei ist, soll er null
+zurückgeben.
+ */
+
+public class Vorlesung {
+	private String name;
+	private String dozent_in;
+	private String studiengang;
+	
+	public Vorlesung(String name, String dozent_in, String studiengang){
+		this.name = name;
+		this.dozent_in = dozent_in;
+		this.studiengang = studiengang;
+	}
+	public Vorlesung (){
+	}
+	
+	public String getVorlesung() {
+		if (name == null){
+			return null;
+		} else {
+			return name + ", " + dozent_in + ", " + studiengang;
+		}
+	}
+
+}
