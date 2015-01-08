@@ -1,0 +1,37 @@
+package bonus_uebungsblatt;
+
+public class Betrag {
+	
+	public static double betrag(double zahl) {
+		double betrag;
+		if (zahl<0) {
+			betrag = -zahl;
+		} else {
+			betrag = zahl;
+		}
+		return betrag;
+	}
+	
+	public static int betrag(int zahl) {
+		int betrag = (int)betrag((double)zahl);
+		return betrag;
+	}
+	public static float betrag(float zahl) {
+		float betrag = (float)betrag((double)zahl);
+		return betrag;
+	}
+	public static short betrag(short zahl) {
+		short betrag = (short)betrag((double)zahl);
+		return betrag;
+	}
+	public static long betrag(long zahl) {
+		long betrag = (long)betrag((double)zahl);
+		return betrag;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(betrag(-22.34542));
+	}
+	
+	
+}
